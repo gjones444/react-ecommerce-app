@@ -1,10 +1,14 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
+import React from 'react';
+import Announcements from '../components/Announcements';
+import Navbar from '../components/Navbar';
+import Slider from '../components/Slider';
 
 const Home = () => {
     return (
         <div className="container">
-            <Navbar/>
+            <Announcements />
+            <Navbar />
+            <Slider />
         </div>
     )
 }
