@@ -45,7 +45,7 @@ const ImgContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 80%;
+  height: 600px;
 `;
 
 const InfoContainer = styled.div`
@@ -53,9 +53,23 @@ const InfoContainer = styled.div`
   padding: 50px;
 `;
 
-const Title = styled.h1``;
-const Desc = styled.p``;
-const Button = styled.button``;
+const Title = styled.h1`
+  fontsize: 70px;
+`;
+
+const Desc = styled.p`
+margin: 40px;
+fontSize: 20px;
+font-weight: 500;
+letter-spacing: 3px;
+`;
+
+const Button = styled.button`
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
+`;
 
 const Slider = () => {
   return (
@@ -66,11 +80,11 @@ const Slider = () => {
       <Wrapper>
         <Slide>
           <ImgContainer>
-            <Image src="https://cdn.pixabay.com/photo/2016/11/29/10/10/girl-1868930_1280.jpg"></Image>
+            <Image src="https://i.ibb.co/HdVVm8C/pexels-godisable-jacob-818992.jpg"></Image>
           </ImgContainer>
           <InfoContainer>
-            <Title>Fall Sale</Title>
-            <Desc>Fall Season is here! Get 20% off all tops!!</Desc>
+            <Title>FALL SALE</Title>
+            <Desc>FALL SEASON IS FINALLY HERE! GET 20% OFF ALL SALE ITEMS!! USE PROMO CODE: AUTUMN21</Desc>
             <Button>Shop Now</Button>
           </InfoContainer>
         </Slide>
