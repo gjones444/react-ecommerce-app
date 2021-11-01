@@ -1,13 +1,14 @@
-import React from "react";
-import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
+import React, { useState } from "react";import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import styled from "styled-components";
+import sliderItems from "../data";
 
 const Container = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
 `;
 
 const Arrow = styled.div`
@@ -26,10 +27,14 @@ const Arrow = styled.div`
   margin: auto;
   cursor: pointer;
   opacity: 0.5;
+  z-index: 2;
 `;
 
 const Wrapper = styled.div`
   height: 100%;
+  display: flex;
+  transition: all 1.5s ease;
+  transform: translateX(${props=>props.slideIndex * -100}vw);
 `;
 
 const Slide = styled.div`
@@ -37,6 +42,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: #${(props) => props.bg};
 `;
 
 const ImgContainer = styled.div`
@@ -58,10 +64,10 @@ const Title = styled.h1`
 `;
 
 const Desc = styled.p`
-margin: 40px;
-fontSize: 20px;
-font-weight: 500;
-letter-spacing: 3px;
+  margin: 40px;
+  fontsize: 20px;
+  font-weight: 500;
+  letter-spacing: 3px;
 `;
 
 const Button = styled.button`
@@ -72,24 +78,36 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+
+    if (direction==="left") {
+        setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2 )
+    } else {
+        setSlideIndex( slideIndex < 2 ? slideIndex+1 : 0)
+    }
+  };
+
   return (
     <Container>
-      <Arrow direction="left">
+      <Arrow direction="left" onClick={() => handleClick("left")}>
         <ArrowLeftOutlinedIcon></ArrowLeftOutlinedIcon>
       </Arrow>
-      <Wrapper>
-        <Slide>
-          <ImgContainer>
-            <Image src="https://i.ibb.co/HdVVm8C/pexels-godisable-jacob-818992.jpg"></Image>
-          </ImgContainer>
-          <InfoContainer>
-            <Title>FALL SALE</Title>
-            <Desc>FALL SEASON IS FINALLY HERE! GET 20% OFF ALL SALE ITEMS!! USE PROMO CODE: AUTUMN21</Desc>
-            <Button>Shop Now</Button>
-          </InfoContainer>
-        </Slide>
+      <Wrapper slideIndex={slideIndex}>
+        {sliderItems.map((item) => (
+          <Slide bg={item.bg}>
+            <ImgContainer>
+              <Image src={item.img}></Image>
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Desc>{item.desc}</Desc>
+              <Button>Shop Now</Button>
+            </InfoContainer>
+          </Slide>
+        ))}
       </Wrapper>
-      <Arrow direction="right">
+      <Arrow direction="right" onClick={() => handleClick("rigt")}>
         <ArrowRightOutlinedIcon></ArrowRightOutlinedIcon>
       </Arrow>
     </Container>
