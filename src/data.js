@@ -25,18 +25,46 @@ export const sliderItems = [
 export const categories = [
         {
             id: 1,
-            img: "https://m.media-amazon.com/images/I/51NVJDWQamL.jpg",
+            img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
             title: "SHIRTS",
         },
         {
             id: 2,
-            img: "https://sc01.alicdn.com/kf/HTB1TO3ELXXXXXcVXVXXq6xXFXXXh/223029708/HTB1TO3ELXXXXXcVXVXXq6xXFXXXh.jpg",
+            img: "https://i.ebayimg.com/images/g/puQAAOSwYVRhBxMV/s-l300.jpg",
             title: "PANTS",
         },{
             id: 3,
-            img: "https://nextluxury.com/wp-content/uploads/Top-15-Fashion-Accessories-For-Men-1.jpg",
+            img: "https://hudsonvalleystylemagazine.com/wp-content/uploads/2021/05/IMG_1407.jpg",
             title: "ACCESSORIES",
-        },
+        }
+
+];
+
+export const popularProducts = [
+    {
+        id: 1,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
+    {
+        id: 2,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
+    {
+        id: 3,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
+    {
+        id: 4,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
+    {
+        id: 5,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
+    {
+        id: 6,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
 
 ];
 
