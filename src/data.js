@@ -65,6 +65,14 @@ export const popularProducts = [
         id: 6,
         img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
     },
+    {
+        id: 7,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
+    {
+        id: 8,
+        img: "https://i.pinimg.com/originals/31/03/12/310312fa8c3188a399dd77dae3ea73af.jpg",
+    },
 
 ];
 
